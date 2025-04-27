@@ -9,9 +9,9 @@ const User = z.object({
 
 const ZodUi = () => {
   const [user, setUser] = useState("");
-  const data = { employee: "Dui", id: 123 };
 
   useEffect(() => {
+    const data = { employee: "Dui", id: 123 };
     try {
       User.parse(data);
       setUser(true);
@@ -19,7 +19,7 @@ const ZodUi = () => {
       setUser(false);
       console.log(error);
     }
-  }, [data]);
+  }, []);
 
   return (
     <div>
